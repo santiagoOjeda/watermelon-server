@@ -1,11 +1,14 @@
 const express = require("express");
-const app = express();
+const { get } = require("http");
 const path = require("path");
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
-app.get("/test", function (req, res) {
-  // res.sendFile(path.join(__dirname + "/index.html"));
-  res.send("WORK!!!!!");
-});
-
-app.listen(port, () => console.log(`url-shortener listening on port ${port}!`));
+express()
+  /*   .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index')) */
+  .get("/test", function (req, res) {
+    res.send("WORKK!!!!");
+  })
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
