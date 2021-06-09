@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/santiagoOjeda/watermelon-server/issues"
   },
-  "homepage": "https://github.com/santiagoOjeda/watermelon-server#readme"
+  "homepage": "https://github.com/santiagoOjeda/watermelon-server#readme",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
 }
