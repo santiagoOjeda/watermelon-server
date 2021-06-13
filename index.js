@@ -1,10 +1,12 @@
-const express = require("express");
-const { get } = require("http");
-const path = require("path");
+const express = require('express');
+const app = express();
+const posts = require('./routes/post');
 const PORT = process.env.PORT || 5000;
 
-express()
-  .get("/", function (req, res) {
-    res.send("WORKK!!!!");
-  })
-  .listen(PORT, () => console.log(`Listening on ${PORT}`));
+app.use('/post', posts);
+
+app.get('/', function (req, res) {
+  res.send('WORKK !!!');
+});
+
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
