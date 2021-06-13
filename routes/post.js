@@ -6,20 +6,8 @@ router.get('/', function (req, res) {
 });
 
 router.get('/all', function (req, res) {
-  res.json({
-    posts: [
-      {
-        title: 'Enim nisi anim cillum ad fugiat officia excepteur ullamco.',
-        paragraph:
-          'Incididunt anim ullamco cupidatat occaecat cillum mollit amet enim minim officia ullamco. Fugiat est et ea nulla reprehenderit nostrud adipisicing velit dolore ullamco aute sint excepteur id. Nostrud minim aute ut aute.',
-      },
-      {
-        title: 'Enim nisi anim cillum ad fugiat officia excepteur ullamco.',
-        paragraph:
-          'Incididunt anim ullamco cupidatat occaecat cillum mollit amet enim minim officia ullamco. Fugiat est et ea nulla reprehenderit nostrud adipisicing velit dolore ullamco aute sint excepteur id. Nostrud minim aute ut aute.',
-      },
-    ],
-  });
+  res.setHeader('Content-Type', 'application/json');
+  res.end(JSON.stringify({ a: 1 }));
 });
 
 module.exports = router;
