@@ -6,7 +6,6 @@ router.get('/', function (req, res) {
 });
 
 router.get('/all', function (req, res) {
-  res.setHeader();
   res.setHeader(
     'Access-Control-Allow-Origin',
     'Content-Type',
