@@ -6,8 +6,14 @@ router.get('/', function (req, res) {
 });
 
 router.get('/all', function (req, res) {
-  res.setHeader('Content-Type', 'application/json');
-  res.end(JSON.stringify({ a: 1 }));
+  res.setHeader();
+  res.setHeader(
+    'Access-Control-Allow-Origin',
+    'Content-Type',
+    'application/json',
+    'http://localhost:9000'
+  );
+  res.end(JSON.stringify({ a: 2 }));
 });
 
 module.exports = router;
