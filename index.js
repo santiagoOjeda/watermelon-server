@@ -3,7 +3,7 @@ const app = express();
 
 var cors = require("cors");
 const PORT = process.env.PORT || 5000;
-const PostModel = require("./schemas/post");
+
 const posts = require("./routes/post");
 
 require("./connection");
