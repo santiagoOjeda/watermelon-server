@@ -3,9 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const PORT = process.env.PORT || 5000;
-
 const posts = require("./routes/post");
-
 require("./connection");
 
 const corsOptions = {
@@ -18,25 +16,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use("/post", posts);
+
 app.get("/", function (req, res) {
   res.send("WORKK !!!");
 });
-/* const post = new PostModel({
-  title: "Santiago es muy groso 3",
-  paragraph: "Si efectivamente sos un capo man",
-});
- */
-/* post.save((err, document) => {
-  if (err) console.log(err);
-  console.log(document);
-}); */
-
-/* const getAllPost = async () => {
-  const postList = await PostModel.find();
-  console.log(postList);
-};
-
-getAllPost(); */
 
 app.use(cors(corsOptions));
 

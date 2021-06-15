@@ -7,15 +7,15 @@ router.get("/", function (req, res) {
 });
 
 router.get("/all", async function (req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  /* res.setHeader("Access-Control-Allow-Origin", "*"); */
   const postList = await postService.list();
   res.json(postList);
 });
 
 router.post("/save", async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin", "*");
   const postList = await postService.save(req.body);
-  res.sendStatus(200);
+  res.send(postList);
 });
 
 module.exports = router;
