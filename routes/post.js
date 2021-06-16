@@ -7,7 +7,7 @@ router.get("/", function (req, res) {
 });
 
 router.get("/all", async function (req, res) {
-  /* res.setHeader("Access-Control-Allow-Origin", "*"); */
+  res.setHeader("Access-Control-Allow-Origin", "*");
   const postList = await postService.list();
   res.json(postList);
 });
