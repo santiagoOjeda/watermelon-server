@@ -13,8 +13,9 @@ router.get("/all", async function (req, res) {
 });
 
 router.post("/save", async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  await postService.save(req.body);
+  res.header("Access-Control-Allow-Origin", "*");
+  const postList = await postService.save(req.body);
+  res.send(postList);
 });
 
 module.exports = router;
