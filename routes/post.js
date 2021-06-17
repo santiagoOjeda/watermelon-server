@@ -13,15 +13,8 @@ router.get("/all", async function (req, res) {
 });
 
 router.post("/save", async (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:9000");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers"
-  );
-  const postList = await postService.save(req.body);
-  res.send(postList);
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  await postService.save(req.body);
 });
 
 module.exports = router;
