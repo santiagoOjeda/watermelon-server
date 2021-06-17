@@ -11,6 +11,7 @@ const corsOptions = {
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
+app.use(cors(corsOptions));
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -20,7 +21,5 @@ app.use("/post", posts);
 app.get("/", function (req, res) {
   res.send("WORKK !!!");
 });
-
-app.use(cors(corsOptions));
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
