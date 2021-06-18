@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const postService = require("../services/post");
+const cors = require("cors");
+express().use(cors());
 
 router.get("/", function (req, res) {
   res.send(postService.save());
