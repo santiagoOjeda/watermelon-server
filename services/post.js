@@ -1,4 +1,4 @@
-const PostModel = require("../schemas/post");
+const PostModel = require('../schemas/post');
 
 const postService = {
   save: (body) => {
@@ -6,7 +6,6 @@ const postService = {
       title: body.title,
       paragraph: body.paragraph,
     });
-    console.log("post", post);
     post.save((err, document) => {
       if (err) console.log(err);
       console.log(document);
