@@ -5,6 +5,9 @@ const postService = {
     const post = new PostModel({
       title: body.title,
       paragraph: body.paragraph,
+      date: body.date,
+      author: body.author,
+      bgColor: body.bgColor,
     });
     post.save((err, document) => {
       if (err) console.log(err);
