@@ -1,10 +1,12 @@
-const express = require("express");
-const path = require("path");
+import express from "express";
+import path from "path";
+
+import postService from "../services/post";
+import multer from "multer";
+import cors from "cors";
+
 const app = express();
 const router = express.Router();
-const postService = require("../services/post");
-const multer = require("multer");
-const cors = require("cors");
 
 // middlewares
 app.use(cors());
