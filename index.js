@@ -1,8 +1,8 @@
-import express from "express";
-import cors from "cors";
-import "./connection";
-import bodyParser from "body-parser";
-import posts from "./src/routes/post";
+const express = require("express");
+const cors = require("cors");
+require("./connection");
+const bodyParser = require("body-parser");
+const posts = require("./src/routes/post");
 
 const PORT = process.env.PORT || 5050;
 

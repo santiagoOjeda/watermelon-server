@@ -1,9 +1,9 @@
-import express from "express";
-import path from "path";
+const express = require("express");
+const path = require("path");
 
-import postService from "../services/post";
-import multer from "multer";
-import cors from "cors";
+const postService = require("../services/post");
+const multer = require("multer");
+const cors = require("cors");
 
 const app = express();
 const router = express.Router();
