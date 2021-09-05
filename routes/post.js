@@ -26,5 +26,8 @@ router.post('/save', async (req, res) => {
   const postList = await postService.save(req.body);
   res.send(postList);
 });
+router.post('/save-image', async (req, res) => {
+  res.send(req.file);
+});
 
 module.exports = router;
