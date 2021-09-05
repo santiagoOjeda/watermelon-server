@@ -1,4 +1,4 @@
-const PostModel = require('../schemas/post');
+const PostModel = require("../schemas/post");
 
 const postService = {
   save: (body) => {
@@ -8,7 +8,6 @@ const postService = {
       date: body.date,
       author: body.author,
       bgColor: body.bgColor,
-      img: body.img,
     });
     post.save((err, document) => {
       if (err) console.log(err);
