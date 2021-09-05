@@ -1,9 +1,8 @@
+import express from "express";
+import cors from "cors";
 import "./connection";
-const posts = require("./src/routes/post");
-const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
-const cors = require("cors");
+import bodyParser from "body-parser";
+import posts from "./src/routes/post";
 
 const PORT = process.env.PORT || 5050;
 
@@ -12,7 +11,6 @@ app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(bodyParser());
 
 app.get("/", function (req, res) {
   res.send("WORKK !!!");
